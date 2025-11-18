@@ -33,7 +33,7 @@ This repository contains my complete Angular and TypeScript learning materials, 
 - **Angular**
 - **TypeScript**
 - **HTML / CSS**
-- **Bootstrap (if used)**
+- **Bootstrap**
 
 ---
 
