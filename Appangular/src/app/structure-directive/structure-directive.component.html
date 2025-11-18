@@ -1,0 +1,21 @@
+<p>structure-directive works!</p>
+
+<!-- <h1 *ngIf="st; else elseblock">Condition is True</h1>
+<ng-template #elseblock><h1>Condition is False</h1></ng-template> -->
+
+
+
+<!-- Check Even Or Odd-->
+Number1:<input type="text" #e1/><br><br>
+<input type = "button" value="Check EveOdd" (click)="EvenOdd(e1.value)"/><br><br>
+<h1 *ngIf="st; else oddnum">Number is Even</h1>
+<ng-template #oddnum><h1>Number is Odd</h1></ng-template>
+
+
+
+
+<!-- Check Leap Year-->
+Enter Year:<input type="text" #y1><br><br>
+<input type="button" value="Check Leap" (click)="Leap(y1.value)"/><br>
+<h1 *ngIf="ly; else notleap">Leap Year</h1>
+<ng-template #notleap><h1>Not Leap year</h1></ng-template>

@@ -1,0 +1,39 @@
+<p>ng-for works!</p>
+
+<ul *ngFor = "let d of data; let i=index; let e=even; let o=odd; let f=first; let l=last">
+    <li>Index:{{i}}, Even Index: {{e}}, odd Index:{{o}}, IsFirst:{{f}}, IsLast:{{l}}, DataofArray:{{d}}</li>
+</ul>
+
+
+<table border="1">
+    <thead>
+    <tr>
+    <th>Data</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor = "let d1 of data">
+        <td>
+            {{d1}}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<br><br>
+
+
+<table border="2" [cellPadding]="20" [cellSpacing]="10">
+    <thead>
+        <th>Name</th>
+        <th>RollNo</th>
+        <th>Marks</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of student">
+            <td>{{s.Name}}  </td>
+            <td>{{s.Rollno}}</td>
+            <td>{{s.Marks}}</td>
+        </tr>
+    </tbody>
+</table>

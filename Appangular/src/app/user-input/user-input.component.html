@@ -1,0 +1,29 @@
+Number1:<input type="text" #t1/><br><br>
+Number2:<input type="text" #t2/><br><br>
+
+<!-- <input type = "button" value="Add" (click)="Addition(t1.value, t2.value)"/><br><br>
+<h1>Addition:{{res}}</h1> -->
+
+
+<!-- <input type="button" value="AllOperations" (click)="AllOpr(t1.value, t2.value)"/><br><br>
+<h1>Add:{{a}}</h1>
+<h1>Sub:{{b}}</h1>
+<h1>Mul:{{c}}</h1>
+<h1>Div:{{d}}</h1>
+<h1>Mod:{{e}}</h1> -->
+
+<select #operation>
+  <option value="add">Addition</option>
+  <option value="sub">Subtraction</option>
+  <option value="mul">Multiplication</option>
+  <option value="div">Division</option>
+  <option value="mod">Modulo</option>
+</select>
+<input type="button" value="Calculate" 
+       (click)="Allop(t1.value, t2.value, operation.value)">
+<h1>Allop:{{add}}</h1>
+<h1>Allop:{{sub}}</h1>
+<h1>Allop:{{mul}}</h1>
+<h1>Allop:{{div}}</h1>
+<h1>Allop:{{mod}}</h1>
+

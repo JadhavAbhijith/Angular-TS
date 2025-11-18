@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" formControlName="email">
+        <div *ngIf="email?.invalid && (email?.dirty || email.touched)" class="error-message">
+            <div *ngIf="email?.errors?.['required']">Email is Required</div>
+            <div *ngIf="email?.errors?.['email']">Please enter a valid email</div>
+        </div>
+    </div>
+
+
+    <div>
+        <label for="password">Password:</label>
+        <input id="password" type="password" formControlName="password">
+        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error-message">
+            <div *ngIf="password?.errors?.['required']">Password is required</div>
+            <div *ngIf="password?.errors?.['minlength']">Password must be atleast 6 char long</div>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>

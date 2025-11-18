@@ -1,0 +1,38 @@
+<p>jsondemo works!</p>
+
+Roll-Number:<input type="text" #tno/><br><br>
+Student-Name:<input type="text" #tnm/><br><br>
+English:<input type="text" #txte/><br><br>
+Maths:<input type="text" #txtm/><br><br>
+Science:<input type="text" #txtsci/><br><br>
+Total:<input type="button" value="total" (click)="TotalM(txte.value,txtm.value,txtsci.value)"/><br><br>
+Percentage:<input type="button" value="Percent" (click)="Percent(txte.value,txtm.value,txtsci.value)"/><br><br>
+Result:<input type="button" value="Result" (click)="Result(txte.value,txtm.value,txtsci.value)"/><br><br>
+<input type="button" value="Add" (click)="AddStud(tno.value,tnm.value,txte.value,txtm.value,txtsci.value)"/><br><br>
+
+<table border="1">
+    <thead>
+        <tr>
+        <th>Roll-Number</th>
+        <th>Student Name</th>
+        <th>English Marks</th>
+        <th>Maths Marks</th>
+        <th>Science Marks</th>
+        <th>Total Marks</th>
+        <th>Percentage</th>
+        <th>Result</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of stud">
+            <td>{{s.rno}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.eng}}</td>
+            <td>{{s.math}}</td>
+            <td>{{s.sci}}</td>
+            <td>{{s.tot}}</td>
+            <td>{{s.per}}</td>
+            <td>{{s.res}}</td>
+        </tr>
+    </tbody>
+</table>

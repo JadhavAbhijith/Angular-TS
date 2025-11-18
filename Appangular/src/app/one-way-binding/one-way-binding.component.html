@@ -1,0 +1,17 @@
+<p>one-way-binding works!</p>
+
+<h2>Property Binding - Element Property Binding</h2>
+Logo: <img [src]="website.logo"/>
+Logo: <img bind-src="website.logo"/>
+Logo: <img src="{{website.logo}}"/>
+
+
+<button [disabled]="flag">Submit</button>
+<button bind-disabled="!flag">Submit</button>
+
+<h3>Now Observe Directive Property Binding</h3>
+<p [ngClass]="'one two'">Example-1</p>
+
+<p bind-ngClass ="'one two'">Example-11</p>
+
+<p ngClass="{{'one two'}}">Example-111</p>

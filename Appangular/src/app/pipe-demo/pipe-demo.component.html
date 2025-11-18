@@ -1,0 +1,42 @@
+<p>pipe-demo works!</p>
+
+<div>
+    <h4>Date Pipe Example</h4>
+    <b>Date format: </b>My Joining Date is {{jd | date}}.<br/>
+    <b>Specific date Format: </b>My Joining date is {{jd | date:"dd/MM/yyyy"}}.<br/>
+    <b>Full date Format: </b>My Joining date is {{jd | date:"fullDate"}}.<br/>
+    <b>Short date Format: </b>My Joining date is {{jd | date:"shortDate"}}.<br/>
+</div>
+
+
+
+<div>
+    <h3>Chaining of Pipes</h3>
+    <b>the Chained Joining Date is: </b>{{jd | date:'fullDate'|uppercase}}
+</div>
+
+
+
+<div>
+    <h3>For Percent</h3>
+        <p>{{num1 | percent}}</p>
+        <p>{{num1 | percent: '2.2-5'}}</p>
+        <p>{{num1 | percent: '1.2-5'}}</p>
+        <p>{{num1 * num2| percent:'1.2-3'}}</p>
+</div>
+
+
+
+<div>
+    <h3>Currency Pipe Example</h3>
+    <b>Euro: </b>My Laptop price is {{65 | currency:'EUR':true}} <br/>
+    <b>USD: </b>My Laptop price is {{75 | currency:'USD':true}} <br/>
+    <b>Indian: {{250 | currency: 'INR':true}}</b>
+</div>
+
+
+<div>
+    <h3>Number Pipe Example</h3>
+    <p>{{12.638467846 | number:'3.2-5'}}</p>
+    <p>{{384.67846 | number:'3.2-3'}}</p>
+</div>

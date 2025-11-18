@@ -1,0 +1,14 @@
+<p>ng-switch-demo works!</p>
+<ul *ngFor="let p of Person" [ngSwitch]="p.Country">
+    <li *ngSwitchCase="'India'" style="color: red;">
+        {{p.Pid}} {{p.Pname}} {{p.Country}}
+    </li>
+
+    <li *ngSwitchCase="'South Africa'" style="color: greenyellow;">
+        {{p.Pid}} {{p.Pname}} {{p.Country}}
+    </li>
+
+    <li *ngSwitchCase="'New Zealand'" style="color: lightseagreen;">
+        {{p.Pid}} {{p.Pname}} {{p.Country}}
+    </li>
+</ul>

@@ -1,0 +1,12 @@
+.one{
+    color:rgb(214, 226, 43);
+    background-color: rgb(242, 28, 9);
+    height: 10px;
+}
+
+.two{
+    color:rgb(134, 66, 198);
+    background-color: rgb(72, 94, 215);
+    height: 10px;
+    text-transform: uppercase;
+}
