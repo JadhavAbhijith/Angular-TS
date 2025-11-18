@@ -1,0 +1,9 @@
+﻿# Node / Angular
+node_modules/
+dist/
+.angular/
+.DS_Store
+.vscode/
+*.log
+npm-debug.log*
+package-lock.json
