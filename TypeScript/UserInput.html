@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        stud=[]
+        s=""
+        st=""
+        function AddStudent()
+        {
+            r=document.getElementById('txtrno').value
+            n=document.getElementById('txtnm').value
+            a=document.getElementById('txtadd').value
+            s={'rno':r,'name':n,'add':a}//json
+            stud.push(s)//added into array
+            Display()
+            clear()
+        }
+
+        function Display()
+        {
+            let st =""
+            for(let i=0;i<stud.length;i++)
+        {
+            st+="<tr><td>"+stud[i].rno+"</td><td>"+stud[i].name+"</td><td>"+stud[i].add+"</td><td>"+"<input type='button' value='X' onclick= 'Removedata("+i+")'/>"+"</td></tr>"    
+        }
+        document.getElementById('tbl').innerHTML=st
+        }
+
+        function clear()
+        {
+            r=document.getElementById('txtrno').value=""
+            n=document.getElementById('txtnm').value=""
+            a=document.getElementById('txtadd').value=""
+        }
+
+        function Removedata(i)
+        {
+            if(confirm('Are you Sure!!'))
+        {
+            stud.splice(i,1)
+            Display()
+        }
+    }
+
+    </script>
+</head>
+<body  onload="Display()">
+
+
+    Roll-No:<input type="text" id="txtrno"/><br><br>
+    Name:<input type="text" id="txtnm"/><br><br>
+    Address:<input type="text" id="txtadd"/><br><br>
+
+    <input type="button" value="AddStud" onclick="AddStudent()"/>
+
+
+     <table  border="1">
+        <thead>
+        <tr>
+            <th>Roll-Number</th>
+            <th>Student-Name</th>
+            <th>Student-Address</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="tbl">
+            
+        </tbody>
+
+    </table>
+    <button>Submit</button>
+</body>
+</html>

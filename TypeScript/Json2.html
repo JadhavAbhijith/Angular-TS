@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Display()
+        {
+            stud = [{"RollNo":1, "StudName":'Abhijith', "Address":'Sangli', "Marks":87},
+                {"RollNo":2, "StudName":'Atharva', "Address":'Solapur', "Marks":75},
+                {"RollNo":3, "StudName":'Vinit', "Address":'Pune', "Marks":95},
+                {"RollNo":4, "StudName":'Chaitanya', "Address":'Mumbai', "Marks":65}
+            ]
+
+            st = ""
+            for(i = 0; i < stud.length; i++)
+        {
+           st+="<tr><td>"+stud[i].RollNo+"</td><td>"+stud[i].StudName+"</td><td>"+stud[i].Address+"</td><td>"+stud[i].Marks+"</td></tr>"
+        }
+        document.getElementById('tbl').innerHTML=st
+        }
+    </script>
+</head>
+<body onload="Display()">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Roll-Number</th>
+            <th>Student Name</th>
+            <th>Address</th>
+            <th>Marks</th>
+        </tr>
+        </thead>
+        <tbody id="tbl"></tbody>
+    </table>
+    
+</body>
+</html>
