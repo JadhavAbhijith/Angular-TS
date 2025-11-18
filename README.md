@@ -26,6 +26,16 @@ This repository contains my complete Angular and TypeScript learning materials, 
 - Practice and interview preparation  
 - A structured learning path for real-world projects  
 
+
 ---
 
-## 📂 Folder Structure
+## 📦 Tech Stack
+- **Angular**
+- **TypeScript**
+- **HTML / CSS**
+- **Bootstrap (if used)**
+
+---
+
+Happy Coding! 😊
+
